@@ -1,5 +1,5 @@
 'use strict'
-import mailPreview from  './email-preview.cmp.js';
+import mailPreview from './email-preview.cmp.js';
 
 export default {
     props: ['mails'],

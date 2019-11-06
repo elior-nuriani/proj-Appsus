@@ -49,3 +49,10 @@
 .hidden {
     visibility: hidden;
 }
+
+/*  --- Layout --- */
+
+.container{
+    max-width: 1060px;
+    margin: 0 auto;
+}
