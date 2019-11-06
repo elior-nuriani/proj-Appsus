@@ -15,7 +15,7 @@ const myRoutes = [
         component: emailApp,
         children: [
             {
-                path: 'list',
+                path:'list',
                 component: emailList
             }
             

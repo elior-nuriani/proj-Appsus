@@ -7,7 +7,6 @@ export const mailService = {
 // {subject: 'Wassap with Vue?', body: 'May I', isRead: false, sentAt : 1551133930594} 
 var gNextId = 100;
 var gMails = _createMails();
-getMails();
 
 function _createMails() {
     let mails = [_createMail('whatsup', 'I would like..', false, 0),
