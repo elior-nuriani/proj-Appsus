@@ -17,6 +17,7 @@ export default {
     created() {
         mailService.getMails()
             .then(mails => this.mails = mails)
+
     },
     methods:{
 
@@ -24,7 +25,7 @@ export default {
     computed:{
         mailsToShow(){
             return this.mails;
-        }
+        },
     },
     components:{
         emailNav

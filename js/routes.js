@@ -16,7 +16,7 @@ const myRoutes = [
         children: [
             {
                 path:'list',
-                component: emailList
+                component: emailList,
             }
             
         ]
