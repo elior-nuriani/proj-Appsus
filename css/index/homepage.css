@@ -4,8 +4,5 @@
 }
 
 body{
-
-    background-image: url('/img/city.jpg');
-    background-size: cover;
-
+    background-color: bisque;
 }
