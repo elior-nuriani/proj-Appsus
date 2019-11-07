@@ -1,5 +1,28 @@
+import notesList from '../cmps/notes-list.cmp.js'
+
+
 export default {
-    template: `<div>
-                <h1> Welcome To My Keep Note </h1>
-                </div>`
+    props: ['notes'],
+    template: `
+    <section class="keep-app-container">
+    <h1> keep app</h1>
+    <header></header>
+    <notes-list :notes="notesToShow">{{}}</notes-list>
+    </section>
+    
+    `,
+   
+      components: {
+        notesList
+    },   
+    computed:{
+            notesToShow(){
+                return this.notes
+
+}
+
+    }
+
+
+
 }

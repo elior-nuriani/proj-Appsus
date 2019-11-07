@@ -4,34 +4,60 @@
 
 
 export const keepService ={
-    getNotes
+    getNotes,
 
 }
 
-window.notes=gNote;
-
-function getNotes() {
-  return gNotes;
-}
 
 
 let gNotes =[
     {
         id: 101,
-        type,
-        content: "note 1"
+        type: 'textNote',
+        content: 'note 1',
         
     },
     {
         id: 102,
-        type,
-        content: "note 2"
+        type: 'textNote',
+        content: 'note 2'
         
     },
     {
         id:103,
-        type,
-        content: "note 3"
+        type: 'videoNote',
+        content: 'note 3'
         
-    }
+    },
+    {
+        id:104,
+        type: 'TodoNote',
+        content: [
+            {
+                id:1041,
+                content: 'todo 1',
+                isActive: 'false'
+            },
+            {
+                id:1042,
+                type: 'imgNote',
+                content: 'note 5',
+                isActive: true,
+                
+            }
+        ]
+        
+    },
+    {
+        id:105,
+        type: 'imgNote',
+        content: "note 5"
+        
+    },
 ]
+
+window.notes=gNotes;
+
+function getNotes() {
+  return gNotes;
+}

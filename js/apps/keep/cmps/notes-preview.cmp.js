@@ -1,7 +1,7 @@
 
 
 export default {
-props: ['note'],
+props: ['keep'],
 template: `
 <li>
 <h2{{note}}</h2>
