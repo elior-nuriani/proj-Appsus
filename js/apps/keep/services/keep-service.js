@@ -24,25 +24,25 @@ function createKeep(type, content) {
 let gKeeps =[
     {
         id: 101,
-        type: 'txtKeep',
+        type: 'keepTxt',
         content: 'note 1',
         
     },
     {
         id: 102,
-        type: 'txtKeep',
+        type: 'keepTxt',
         content: 'note 2'
         
     },
     {
         id:103,
-        type: 'txtKeep',
+        type: 'keepTxt',
         content: 'note 3'
         
     },
     {
         id:104,
-        type: 'txtKeep',
+        type: 'keepTxt',
         content: [
             {
                 id:1041,
@@ -51,7 +51,7 @@ let gKeeps =[
             },
             {
                 id:1042,
-                type: 'imgkeep',
+                type: 'keepImg',
                 content: 'note 5',
                 isActive: true,
                 
@@ -61,7 +61,7 @@ let gKeeps =[
     },
     {
         id:105,
-        type: 'imgKeep',
+        type: 'keepImg',
         content: 'https://i0.wp.com/psychedelic.support/wp-content/uploads/2019/03/CarlJung.jpg?fit=681%2C714&ssl=1'
         
     },

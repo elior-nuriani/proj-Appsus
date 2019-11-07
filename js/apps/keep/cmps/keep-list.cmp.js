@@ -10,6 +10,7 @@ export default {
     template: `
         <ul v-if="keeps" class="keep-list-container ">
         <li class= "container keep-list clean-list " v-for="keep in keeps" :key=keep.id :keep="keep" >
+        <component :is="keep.type" content="keep.content"></component>
         <h1>{{keep.id}}</h1> ||
         {{keep.type}} ||
         {{keep.content}}
@@ -17,7 +18,6 @@ export default {
         </ul>
         `,
         data() {
-            // <component :is="keep.type" content="keep.content"></component>
             return {
             keeps: []
         }
