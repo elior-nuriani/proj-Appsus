@@ -1,4 +1,5 @@
 'use strict'
+import {eventBus} from './apps/services/eventbus-service.js'
 import appHeader from './apps/global-cmps/app-header.cmp.js'
 import theRouter from './routes.js'
 
@@ -14,7 +15,8 @@ let options = {
     `,
     router:theRouter,
     components:{
-        appHeader
+        appHeader,
+        eventBus
     }
 }
 new Vue(options);
