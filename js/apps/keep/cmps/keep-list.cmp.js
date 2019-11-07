@@ -2,20 +2,23 @@
 
 import { keepService } from '../services/keep-service.js'
 import keepPreview from './keep-preview.cmp.js'
+import keepTxt from './keep-img.cmp.js'
+import keepImg from './keep-img.cmp.js'
 
 export default {
+    name: 'keep-list',
     template: `
-<section v-if="keeps" class="keep-list-container">
-<div class= "keep-list" v-for="keep in keeps" :key=keep.id :keep="keep">
-    {{keep.id}} ||
-    {{keep.type}} ||
-    {{keep.content}}
-</div>
-</section>
-`,
-// <component :is="keep.type" data="keep.data"></component>
-    data() {
-        return {
+        <ul v-if="keeps" class="keep-list-container ">
+        <li class= "container keep-list clean-list " v-for="keep in keeps" :key=keep.id :keep="keep" >
+        <h1>{{keep.id}}</h1> ||
+        {{keep.type}} ||
+        {{keep.content}}
+        </li>
+        </ul>
+        `,
+        data() {
+            // <component :is="keep.type" content="keep.content"></component>
+            return {
             keeps: []
         }
     },
@@ -27,8 +30,12 @@ export default {
     components: {
         keepService,
         keepPreview,
+        keepTxt,
+        keepImg,
     },
     created() {
         this.getKeeps();
+        // console.log('keeps', keep.type);
+
     }
 }

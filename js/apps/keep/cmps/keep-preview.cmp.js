@@ -1,12 +1,13 @@
 
 
 export default {
+    name: 'keep-preview',
     props: ['keep'],
     template: `
-<div >
+<li >
 <h2>{{keep.id}}</h2>
 
-</div>
+</li>
 `,
     created() {
         console.log(this.keep.id)
