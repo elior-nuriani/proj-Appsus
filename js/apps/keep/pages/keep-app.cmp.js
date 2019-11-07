@@ -1,27 +1,27 @@
-import notesList from '../cmps/notes-list.cmp.js'
+import keepList from '../cmps/keep-list.cmp.js'
 
 
 export default {
-    props: ['notes'],
+    
     template: `
     <section class="keep-app-container">
     <h1> keep app</h1>
-    <header></header>
-    <notes-list :notes="notesToShow">{{}}</notes-list>
+    <header>second header</header>
+    <keep-list ></keep-list>
     </section>
     
     `,
    
-      components: {
-        notesList
+    components: {
+        keepList
     },   
-    computed:{
-            notesToShow(){
-                return this.notes
+//     computed:{
+//             keepToShow(){
+//                 return this.notes
 
-}
+// }
 
-    }
+    // }
 
 
 

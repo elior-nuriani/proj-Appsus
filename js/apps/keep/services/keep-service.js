@@ -4,13 +4,13 @@
 
 
 export const keepService ={
-    getNotes,
+    getKeeps,
 
 }
 
 
 
-let gNotes =[
+let gKeeps =[
     {
         id: 101,
         type: 'textNote',
@@ -56,8 +56,8 @@ let gNotes =[
     },
 ]
 
-window.notes=gNotes;
+window.keeps=gKeeps;
 
-function getNotes() {
-  return gNotes;
+function getKeeps() {
+  return Promise.resolve(gKeeps);
 }
