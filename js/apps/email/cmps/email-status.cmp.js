@@ -4,9 +4,11 @@ export default{
                     <span> Read Mails: </span>
                     <span> Unread Mails: </span>
                     <span> Overall: </span>
+                    
                 </div>`
                 ,
+
     created(){
-        console.log(this.mailsInfo)
+        
     }
 }

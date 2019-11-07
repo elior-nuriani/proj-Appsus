@@ -18,7 +18,8 @@ export default {
     `,
     data(){
         return{
-            mails:[]
+            mails:[],
+            mailInfo :{}
         }
     },
     created() {
@@ -36,12 +37,13 @@ export default {
             let total = this.mails.length;
             let read;
             let unread;
-             mailService.getReadMails()
+            return mailService.getReadMails()
             .then( mails => {
                 read = mails.length;
                 unread = total - read;
                 return {read,unread,total}
             })
+            
         }
     },
     components: {
