@@ -2,7 +2,7 @@
 import home from './apps/pages/homepage.cmp.js'
 import emailApp from './apps/email/pages/email-app.cmp.js'
 import keepApp from './apps/keep/pages/keep-app.cmp.js'
-import emailList from './apps/email/cmps/email-list.cmp.js'
+import mailDetails from './apps/email/pages/email-details.cmp.js'
 
 
 const myRoutes = [
@@ -13,19 +13,18 @@ const myRoutes = [
     {
         path: '/email',
         component: emailApp,
-        children: [
-            {
-                path:'list',
-                component: emailList,
-            }
-            
-        ]
+
     },
     {
         path: '/keep',
         component: keepApp
     },
+    {
+        path: '/mail/details/:id',
+        component: mailDetails
+    },
+    
 
 ]
-const myRouter = new VueRouter({routes: myRoutes})
+const myRouter = new VueRouter({ routes: myRoutes })
 export default myRouter;
