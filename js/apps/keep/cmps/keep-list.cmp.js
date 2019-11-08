@@ -2,7 +2,7 @@
 
 import { keepService } from '../services/keep-service.js'
 import keepPreview from './keep-preview.cmp.js'
-import txtKeep from './keep-img.cmp.js'
+import keepTxt from './keep-txt.cmp.js'
 import keepImg from './keep-img.cmp.js'
 
 export default {
@@ -30,7 +30,7 @@ export default {
     components: {
         keepService,
         keepPreview,
-        txtKeep,
+        keepTxt,
         keepImg,
     },
     created() {

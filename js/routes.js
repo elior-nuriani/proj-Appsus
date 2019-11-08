@@ -19,8 +19,9 @@ const myRoutes = [
         path: '/keep',
         component: keepApp
     },
+
     {
-        path: '/mail/details/:id',
+        path: '/mail/details/:id?',
         component: mailDetails
     },
     
