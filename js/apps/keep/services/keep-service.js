@@ -47,7 +47,7 @@ let gKeeps =[
         content: [
             {
                 id:1041,
-                content: '',
+                content: 'keepTxt',
                 isActive: 'false'
             },
             {

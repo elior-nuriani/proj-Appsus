@@ -4,10 +4,10 @@ export const mailService = {
     getMails,
     removeMail,
     getMailById,
-    getReadMails
+    getReadMails,
+    setProp
 }
 
-// {subject: 'Wassap with Vue?', body: 'May I', isRead: false, sentAt : 1551133930594} 
 var gNextId = 100;
 var gMails = _createMails();
 
@@ -48,4 +48,11 @@ function getMailById(id) {
 
 function getReadMails(){
     return Promise.resolve (gMails.filter( mail => mail.isRead))
+}
+
+function setProp(mailId,key){
+    getMailById(mailId).then( (mail) => {
+        mail[key] = !mail[key]
+        console.log(gMails)
+    })
 }

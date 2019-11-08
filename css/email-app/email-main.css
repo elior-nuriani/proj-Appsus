@@ -4,6 +4,9 @@
 .boldText{
     font-weight: bolder;
 }
+.email-filter-container{
+    width: 50vw;
+}
 .mails-list-container{
     width: 100%;
     margin-top: 50px;
@@ -17,4 +20,7 @@
 }
 .mail-main-info div{
     margin: 10px;
+}
+.mail-important{
+    color: gold;
 }
