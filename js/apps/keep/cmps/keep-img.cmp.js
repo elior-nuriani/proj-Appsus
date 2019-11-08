@@ -1,11 +1,11 @@
 export default {
     name: 'keep-img',
+    props: ['content'],
     template: `
         <section class="keep-preview-container flex">
         <img :src="content" alt="">
         </section>
     `,
-    props: ['content'],
     created() {
         console.log('this.content', this.content);
     },

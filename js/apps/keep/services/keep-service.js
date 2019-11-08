@@ -26,19 +26,20 @@ let gKeeps =[
         id: 101,
         type: 'keepTxt',
         content: 'note 1',
+        isPinned: false,
         
     },
     {
         id: 102,
         type: 'keepTxt',
-        content: 'note 2'
-        
+        content: 'note 2',
+        isPinned: false,
     },
     {
         id:103,
         type: 'keepTxt',
-        content: 'note 3'
-        
+        content: 'note 3',
+        isPinned: false,
     },
     {
         id:104,
@@ -51,19 +52,19 @@ let gKeeps =[
             },
             {
                 id:1042,
-                type: 'keepImg',
                 content: 'note 5',
                 isActive: true,
                 
             }
-        ]
+        ],
+        isPinned: false,
         
     },
     {
         id:105,
         type: 'keepImg',
-        content: 'https://i0.wp.com/psychedelic.support/wp-content/uploads/2019/03/CarlJung.jpg?fit=681%2C714&ssl=1'
-        
+        content: 'https://www.youtube.com/watch?v=EuPSibuIKIg',
+        isPinned: false,
     },
 ]
 
