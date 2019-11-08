@@ -60,7 +60,7 @@ export default {
             })
             let read = mailRead.length
             let unread = total - read;
-            return { read, unread, total }
+            return { read, unread, total}
         },
         mailsToShow() {
             if (!this.filterBy && this.filterType.toLowerCase() === 'all') 
