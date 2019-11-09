@@ -1,3 +1,4 @@
+import {keepService} from '../services/keep-service.js'
 import keepList from '../cmps/keep-list.cmp.js'
 import keepHeader from '../cmps/keep-header.cmp.js'
 import addKeep from '../cmps/add-keep.cmp.js'
@@ -37,7 +38,12 @@ export default {
         keepList,
         keepHeader,
         addKeep,
+        keepService,
     },   
+    created() {
+        this.keeps = keepService.keepQuery();
+        console.log('keeps', this.keeps);
+    },
 //     computed:{
 //             keepToShow(){
 //                 return this.keeps
