@@ -4,9 +4,9 @@ export default{
     props:['content'],
     template: `
     <section class="keep-todo">
-        <div v-for="todo in data" @click="toggleIsDone(todo)">
+        <div v-for="todo in content" ">
             <input type="checkbox" :id="todo.id" :checked="!!todo.isDone" />
-            <label for="todo.id" :class="{ marked: todo.isDone }">{{todo.txt}}</label>
+            <label for="todo.id" :class="{ marked: todo.isDone }" @click="toggleIsDone(todo)>{{todo.txt}}</label>
     </div>
     </section>
     `,

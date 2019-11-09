@@ -4,6 +4,8 @@ import { keepService } from '../services/keep-service.js'
 import keepPreview from './keep-preview.cmp.js'
 import keepTxt from './keep-txt.cmp.js'
 import keepImg from './keep-img.cmp.js'
+import keepTodo from './keep-todo.cmp.js'
+import keepVid from './keep-vid.cmp.js'
 
 export default {
     name: 'keep-list',
@@ -32,6 +34,8 @@ export default {
         keepPreview,
         keepTxt,
         keepImg,
+        keepTodo,
+        keepVid,
     },
     created() {
         this.getKeeps();

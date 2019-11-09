@@ -5,7 +5,7 @@
 
 export const keepService ={
     getKeeps,
-    // createKeeps
+    createKeep
 
 }
 
@@ -63,6 +63,12 @@ let gKeeps =[
     {
         id:105,
         type: 'keepImg',
+        content: 'https://i0.wp.com/psychedelic.support/wp-content/uploads/2019/03/CarlJung.jpg?fit=681%2C714&ssl=1',
+        isPinned: false,
+    },
+    {
+        id:106,
+        type: 'keepVid',
         content: 'https://www.youtube.com/watch?v=EuPSibuIKIg',
         isPinned: false,
     },

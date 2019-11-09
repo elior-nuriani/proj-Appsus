@@ -2,7 +2,7 @@ export default {
     template: `
         <header class="keep-header-container">
             <h1>Search area</h1>
-            <input type="text" placeholder="Search In your keep" />
+            <input type="text" placeholder="Search In your keep" v-model="filterBy.txt" @input="onFilterInput()" />
             <select>
                 <option>All</option>
                 <option>Text</option>
@@ -13,4 +13,17 @@ export default {
            
         </header>
     `,
+    data() {
+        return {
+            keeps: null,
+            filterBy: {
+                txt: ''
+            }
+        }
+    },
+    methods: {
+        onFilterInput() {
+            this.$emit('filtered', this.filterBy)
+        }
+    },
 }
