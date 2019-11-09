@@ -1,9 +1,10 @@
 'use strict'
-import {eventBus} from '../../services/eventbus-service.js'
+import { eventBus } from '../../services/eventbus-service.js'
 import { mailService } from '../services/email-service.JS'
 import mailPreview from './email-preview.cmp.js';
 import emailStatus from './email-status.cmp.js';
 import emailFilter from './email-filter.cmp.js';
+import emailSentPreview from './email-sent-preview.js';
 
 
 
@@ -16,10 +17,9 @@ export default {
             <mail-preview v-for="(currMail, idx) in mailsToShow" :key="currMail.id" :mail="currMail" 
             @remove="removeMail" @setProp="editProp" >
             </mail-preview>
-            {{searchBy}}
         </ul>
         <ul v-else>
-            ddddd
+            <email-sent-preview :mails="sentMails"></email-sent-preview>
         </ul>
     </section>
     `,
@@ -30,16 +30,23 @@ export default {
             filterBy: null,
             filterType: 'All',
             searchBy: 'subject',
-            isSentMail:false
+            isSentMail: false,
+            sentMails: []
         }
     },
     created() {
         mailService.getMails()
             .then(mails => this.mails = mails)
-        .then(eventBus.$on('isSent', (decision) => {
-            this.isSentMail = decision;
-        }))
+            .then(eventBus.$on('isSent', (decision) => {
+                this.isSentMail = decision;
+            }))
     },
+    mounted(){
+        mailService.getSentMails().then((res) => {
+            console.log(res)
+        })
+    },
+
     methods: {
         removeMail(id) {
             mailService.removeMail(id)
@@ -50,13 +57,12 @@ export default {
         setSearch(searchBy) {
             this.searchBy = searchBy;
         },
-        setFilterType(type){
+        setFilterType(type) {
             this.filterType = type;
         },
-        editProp(mailId,key){
-            mailService.setProp(mailId,key)
-        }
-
+        editProp(mailId, key) {
+            mailService.setProp(mailId, key)
+        },
     },
     computed: {
         mailsInfo() {
@@ -66,30 +72,24 @@ export default {
             })
             let read = mailRead.length
             let unread = total - read;
-            return { read, unread, total}
+            return { read, unread, total }
         },
         mailsToShow() {
-            //Check For if its List of sent mails....
-            if(this.isSentMail) {
-                return mailService.getSentMails().then( (mails) => {
-                    return mails;
-                })
-            }
             let filterdTypeMails;
             if (!this.filterBy && this.filterType.toLowerCase() === 'all' ||
-                !this.filterBy) 
+                !this.filterBy)
                 return this.mails;
 
             filterdTypeMails = this.mails;
 
-            if(this.filterType.toLowerCase() !== 'all'){
-                filterdTypeMails = this.mails.filter( (mail) =>{
+            if (this.filterType.toLowerCase() !== 'all') {
+                filterdTypeMails = this.mails.filter((mail) => {
                     let type = this.filterType.toLowerCase();
-                    if(type === 'read') return mail.isRead;
-                    if(type === 'unread') return !mail.isRead;
+                    if (type === 'read') return mail.isRead;
+                    if (type === 'unread') return !mail.isRead;
                     return mail.isMark
                 })
-            } 
+            }
             // console.log(filterdTypeMails,'filter type')
 
             var regex = new RegExp(`${this.filterBy.txt}`, 'i');
@@ -98,7 +98,7 @@ export default {
                     return regex.test(mail[this.searchBy])
                 })
             }
-            else{
+            else {
                 return filterdTypeMails.filter(mail => {
                     return regex.test(mail.subject) || regex.test(mail.body)
                 })
@@ -109,6 +109,7 @@ export default {
         mailPreview,
         emailStatus,
         emailFilter,
+        emailSentPreview,
         eventBus
     }
 }
