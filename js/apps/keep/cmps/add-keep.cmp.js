@@ -6,7 +6,7 @@ export default {
     template:`
         <section class="keep-add flex align-center ">
         
-        <input type="text" ref="keepInput" :placeholder="inputPlaceholder" @keyup.enter="keepAdd" v-model="keep.content"/>
+        <input type="text" refs="keepInput" :placeholder="inputPlaceholder" @keyup.enter="keepAdd" v-model="keep.content"/>
         <div class = "keys-input">
         <button @click="selectKeyType('keepTxt')">TXT</button>
         <button @click="selectKeyType('keepImg')">Img</button>
@@ -33,7 +33,7 @@ export default {
         selectKeyType(type){
             this.keep.type = type
             this.keep.content = ''
-            this.$refs.keepInput.focus()
+            this.$refs['keepInput'].focus()
             return
         },
         // createKeep(){
@@ -41,16 +41,17 @@ export default {
         // }
       
         keepAdd(){
-           if (!this.$refs.input.value) return
-            this.$refs.input.value = '';
-            let type = this.type;
-            let content;
-            if (type === 'keepTxt') content = this.content;
-            else if (type === 'keepImg') content = this.content;
-            else if (type === 'keepVid') content = this.content;
-            else if (type === 'keepTodo') content = this.content;
-            keepService.createKeep(type, content);
-            // console.log(content);
+        //    if (!this.$refs.input.content) return
+        let type = this.keep.type;
+        let content;
+        if (type === 'keepTxt') content = this.keep.content;
+        else if (type === 'keepImg') content = this.keep.content;
+        else if (type === 'keepVid') content = this.keep.content;
+        else if (type === 'keepTodo') content = this.keep.content;
+        keepService.createKeep(type, content);
+        console.log('add-keep type', type);
+        this.$refs['keepInput'] = '';
+            
             
         }
         },
