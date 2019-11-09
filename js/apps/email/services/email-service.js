@@ -5,11 +5,16 @@ export const mailService = {
     removeMail,
     getMailById,
     getReadMails,
-    setProp
+    setProp,
+    saveSentMail,
+    getSentMails
 }
 
 var gNextId = 100;
 var gMails = _createMails();
+var gSentMails = [];
+window.ma = gSentMails;
+
 
 function _createMails() {
     let mails = [_createMail('shoko', 'whatsup', 'I would like..', false, true, 323232323),
@@ -34,6 +39,9 @@ function _createMail(name, subject, body, isRead, isMark, sentAt) {
 function getMails() {
     return Promise.resolve(gMails)
 }
+function getSentMails(){
+    return Promise.resolve(gSentMails)
+}
 
 function removeMail(id) {
     var idx = gMails.findIndex(mail => mail.id === id);
@@ -55,4 +63,10 @@ function setProp(mailId,key){
         mail[key] = !mail[key]
         console.log(gMails)
     })
+}
+
+function saveSentMail(info){ 
+    //Copy The info --- avoiding pointers
+    let mail = Object.assign({}, info);
+    gSentMails.push(mail)
 }

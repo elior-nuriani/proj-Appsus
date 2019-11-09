@@ -1,8 +1,154 @@
 
 *{
     font-family: 'Playfair Display', serif;
+    outline: none;
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: bisque;
+    margin: 0;
+    padding: 0;
 }
+
+#my-app, .main{
+    width: 100vw;
+    height: 100vh;
+}
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/img/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.homepage-main-box{
+    height: 300px;
+    color: white;
+    text-align: center;
+} 
+.homepage-main-box *{
+    font-weight: bolder;
+    font-family:  Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+.homepage-main-box span{
+    font-size: 50px;
+}
+
+.header{
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: wheat;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.nav-bar{
+    height: 100%;
+    font-size: 20px;
+}
+.logo-name{
+    font-family: yeon;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    color: rgb(161, 161, 161);
+}
+.logo-name:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.link {
+    color: rgb(230, 184, 35);
+    padding: 10px 20px;
+    border-radius: 200px;
+    font-family: poppins;
+}
+.link:hover{
+    color: rgb(241, 192, 100);
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    transition:all 0.3s ease-in;
+}
+
+.offcanvas-btn {
+    z-index: 100000;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    height: 50px;
+    width: 50px;
+    background: #e2cb36;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 0;
+    transition: all 0.3s ease;
+    box-shadow:0px 0px 5px 5px rgba(141, 137, 137, 0.712);
+}
+}
+.offcanvas-btn i{
+    color: rgba(0, 0, 0, 0.404);
+}
+.offcanvas-btn-open {
+    margin-right: 25vw;
+}
+.offcanvas-aside {
+    position: fixed;
+    bottom: 0%;
+    height: 92vh;
+    background: rgba(172, 172, 172, 0.603);
+    width: 25vw;
+    right: -25vw;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.offcanvas-aside img {
+    border-radius: 50%;
+}
+.offcanvas-aside p {
+    text-align: center;
+}
+.offcanvas-aside .offcanvas-content-suffix {
+    height: 20%;
+}
+
+.offcanvas-aside-open {
+    right: 0;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: poppins;
+    src: url('/css//fonts/poppins/Poppins-Medium.ttf');
+  }
+
+  @font-face {
+    font-family: yeon;
+    src: url('/css/fonts/YeonSung-Regular.ttf');
+  }

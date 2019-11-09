@@ -11,7 +11,9 @@
 .space-between {
     justify-content: space-between;
 }
-
+.align-end{
+    align-items: flex-end;
+}
 .center{
     justify-content: center;
     align-items: center;
@@ -32,6 +34,9 @@
     flex-direction: column;
 }
 
+.flex-end{
+    justify-content: flex-end;
+}
 .wrap {
 	flex-wrap: wrap;
 }
@@ -52,7 +57,7 @@
 
 /*  --- Layout --- */
 
-.container{
+.base-container{
     max-width: 1060px;
-    margin: 0 auto;
+    margin:0 auto;
 }
