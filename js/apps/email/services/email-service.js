@@ -12,7 +12,7 @@ export const mailService = {
 
 var gNextId = 100;
 var gMails = _createMails();
-var gSentMails = [];
+var gSentMails = ['1','2'];
 window.ma = gSentMails;
 
 
@@ -61,7 +61,6 @@ function getReadMails(){
 function setProp(mailId,key){
     getMailById(mailId).then( (mail) => {
         mail[key] = !mail[key]
-        console.log(gMails)
     })
 }
 
