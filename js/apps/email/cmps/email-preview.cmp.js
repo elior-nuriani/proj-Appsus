@@ -22,7 +22,6 @@ export default {
         </div>
         <email-details v-if="isShowDetails" :mail="mail" class="flex center"></email-details>
         </li>
-        
     `,
     data() {
         return {

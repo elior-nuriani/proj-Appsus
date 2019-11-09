@@ -8,10 +8,10 @@ Vue.config.productionTip = false;
 let options = {
     el: '#my-app',
     template: `
-                <section>
+                <div class="main">
                     <app-header></app-header>
                     <router-view></router-view>
-                </section>
+                </div>
     `,
     router:theRouter,
     components:{
