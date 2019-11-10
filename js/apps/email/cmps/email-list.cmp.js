@@ -43,7 +43,7 @@ export default {
     },
     mounted(){
         mailService.getSentMails().then((res) => {
-            console.log(res)
+            // console.log(res)
         })
     },
 

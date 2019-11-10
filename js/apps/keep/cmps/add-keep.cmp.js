@@ -49,7 +49,7 @@ export default {
         else if (type === 'keepVid') content = this.keep.content;
         else if (type === 'keepTodo') content = this.keep.content;
         keepService.createKeep(type, content);
-        console.log('add-keep type', type);
+        // console.log('add-keep type', type);
         this.$refs['keepInput'] = '';
             
             

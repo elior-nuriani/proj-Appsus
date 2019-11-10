@@ -14,10 +14,10 @@ export default {
         </header>
     `,
     methods: {
-        onSearch(e) {
-            console.log(e.target.value);
+        // onSearch(e) {
+        //     console.log(e.target.value);
             
-            this.$emit('search', e.target.value);
-        }
+        //     this.$emit('search', e.target.value);
+        // }
     },
 }

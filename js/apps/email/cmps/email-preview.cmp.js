@@ -65,7 +65,7 @@ export default {
             }
             displayHours = convertTime.hours;
             displayMinutes = convertTime.minutes;
-            console.log(displayMinutes)
+            // console.log(displayMinutes)
             if (convertTime.hours < 10) displayHours = '0' + displayHours;
             if (convertTime.minutes < 10) displayMinutes = '0' + displayMinutes;
 

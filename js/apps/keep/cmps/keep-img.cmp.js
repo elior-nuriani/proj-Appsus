@@ -7,7 +7,7 @@ export default {
         </section>
     `,
     created() {
-        console.log('this.content', this.content);
+        // console.log('this.content', this.content);
     },
     computed: {
         imgUrl() {

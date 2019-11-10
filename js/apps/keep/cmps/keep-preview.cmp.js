@@ -10,7 +10,7 @@ export default {
 </li>
 `,
     created() {
-        console.log(this.keep.id)
+        // console.log(this.keep.id)
     }
 }
 
