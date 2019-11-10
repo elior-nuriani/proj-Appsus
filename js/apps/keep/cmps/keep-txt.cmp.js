@@ -10,7 +10,7 @@ template:`
 
 `,
 created(){
-console.log('content', this.content);
+// console.log('content', this.content);
 
 }
 

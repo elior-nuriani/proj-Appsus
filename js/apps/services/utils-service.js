@@ -2,7 +2,8 @@
 export default {
     load,
     store,
-    getRandomColor
+    getRandomColor,
+    makeId,
 }
 
 function load(key) {
@@ -26,3 +27,14 @@ function getRandomColor(light = false) {
     return color;
 }
 
+function makeId(length = 4) {
+    var text = '';
+    var possible =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (var i = 0; i < length; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+
+    return text;
+}
