@@ -33,8 +33,8 @@ export default {
         selectKeyType(type){
             this.keep.type = type
             this.keep.content = ''
-            this.$refs['keepInput'].focus()
-            return
+            // // this.$refs['keepInput'].focus()
+            // return
         },
         // createKeep(){
         //     return
