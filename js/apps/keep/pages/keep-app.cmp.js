@@ -10,30 +10,39 @@ export default {
     template: `
     <section class="keep-app-container flex column center wrap">
     <div class="flex column center">
-        <keep-header @search="filteredKeeps"></keep-header>
+        <keep-header @search="queryKeeps(e)"></keep-header>
         <add-keep></add-keep>
     </div>
         
-        <keep-list :keeps="keepsToShow" v-if></keep-list>
+        <keep-list :keeps="keeps" v-if></keep-list>
     </section>
     `,
+    data(){
+        return{
+            keeps: []
+        }
+    },
     computed: {
         keepsToShow() {
             if (!this.filterBy) return this.keeps;
-            // console.log('this.filterBy', this.filterBy.txt);
             var regex = new RegExp(`${this.filterBy.txt}`, 'i');
             return this.keeps.filter(keep => {
                     // console.log(keep)
                     return regex.test(this.filterBy.txt) === regex.test(keep.content)
                 }
-
             )
         },
-        filteredKeeps(e) {
-            // console.log(e);
-        },
+        queryKeeps(str){
+            if(!str) return this.keeps;
+            return this.keeps.filter(keep => {
+                return keep.content.includes(str)
+            })
+        }
     },
     methods: {
+        filteredKeeps(str) {
+            this.keeps = this.queryKeeps(str);
+        },
         
     },
     components: {
@@ -43,17 +52,16 @@ export default {
         keepService,
     },   
     created() {
-        this.keeps = keepService.keepQuery();
-        // console.log('keeps', this.keeps);
+        this.keeps = this.keepsToShow();
     },
-//     computed:{
-//             keepToShow(){
-//                 return this.keeps
-
-// }
-
-//     }
-
-
-
-}
+    //     computed:{
+        //             keepToShow(){
+            //                 return this.keeps
+            
+            // }
+            
+            //     }
+            
+            
+            
+        }

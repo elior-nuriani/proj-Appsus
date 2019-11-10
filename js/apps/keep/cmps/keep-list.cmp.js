@@ -10,7 +10,7 @@ import keepVid from './keep-vid.cmp.js'
 export default {
     name: 'keep-list',
     template: `
-        <div v-if="keeps" class="keep-list-container flex row" >
+        <div v-if="keeps" class="keep-list-container " >
             <div class= "keep-list flex row center wrap " v-for="(keep, idx) in keeps" :keep="keep" :style="{'background-color': keep.color}" >
                 <component :is="keep.type" :content="keep.content"></component>
             
@@ -19,7 +19,7 @@ export default {
                     <input ref="colorInput" style="display:none" type="color" @change="changeKeep(keep.id, 'color',$event.target.value)">
                     <button @click="openColorPicker(idx)"><i class="fa fa-palette"></i></button>
                     <button @click="togglePin(keep.id)"><i class="fas fa-thumbtack"></i></button> 
-                    <button @click.stop ="editKeep" ><i  class="fa fa-edit"></i></button> 
+                    <button @click.stop ="editKeep" ><i class="fa fa-edit"></i></button> 
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@ export default {
                 keeps: [],
                 
             }
-            // <i @click.stop="keepEdit(id)"  class="far fa-edit"></i>
+       
     },
     methods: {
         getKeeps() {

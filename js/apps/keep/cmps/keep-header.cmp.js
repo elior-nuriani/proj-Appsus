@@ -1,7 +1,7 @@
 export default {
     template: `
         <header class="keep-header-container flex row">
-            <input type="text" placeholder="Search In your keep" @click="onSearch" />
+            <input type="text" placeholder="Search In your keep" @input="onSearch" />
             <select>
                 <option>All</option>
                 <option>Text</option>
@@ -13,10 +13,10 @@ export default {
         </header>
     `,
     methods: {
-        // onSearch(e) {
-        //     console.log(e.target.value);
-            
-        //     this.$emit('search', e.target.value);
-        // }
+        onSearch(e) {
+            console.log(e.target.value);
+            this.$emit('search', e.target.value);
+            // this.$emit('search', 'hello');
+        }
     },
 }

@@ -5,7 +5,7 @@ export default{
 
 template:` 
     <section class="keep-preview-container flex">
-    <h1  >{{content}}</h1>
+    <p>{{content}}</p>
     </section> 
 
 `,
