@@ -75,4 +75,11 @@
 
 .txt{
     background-color: rgb(134, 55, 85);
+    
+}
+
+p {
+    font-size: 22px;
+    text-align: left;
+    float: left;
 }

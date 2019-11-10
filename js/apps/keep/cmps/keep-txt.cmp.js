@@ -4,8 +4,8 @@ export default{
     props:['content'],
 
 template:` 
-    <section class="keep-preview-container txt flex">
-    <h1  >{{content}}</h1>
+    <section class="keep-preview-container flex">
+    <p>{{content}}</p>
     </section> 
 
 `,
