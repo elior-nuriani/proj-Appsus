@@ -1,4 +1,5 @@
 'use strict'
+import {data} from './email-data-util.js'
 
 export const mailService = {
     getMails,
@@ -9,32 +10,31 @@ export const mailService = {
     saveSentMail,
     getSentMails
 }
-
-var gNextId = 100;
-var gMails = _createMails();
+// var gNextId = 100;
+var gMails = data
 var gSentMails = ['1','2'];
+
 window.ma = gSentMails;
 
+// function _createMails() {
+//     let mails = [_createMail('shoko', 'whatsup', 'I would like..', false, true, 323232323),
+//     _createMail('luli', 'hey', 'my name', true, false, 192032093),
+//     _createMail('Lucky', 'Job application', 'we like', false, true, 32832323),
+//     ]
+//     return mails;
+// }
 
-function _createMails() {
-    let mails = [_createMail('shoko', 'whatsup', 'I would like..', false, true, 323232323),
-    _createMail('luli', 'hey', 'my name', true, false, 192032093),
-    _createMail('Lucky', 'Job application', 'we like', false, true, 32832323),
-    ]
-    return mails;
-}
-
-function _createMail(name, subject, body, isRead, isMark, sentAt) {
-    return {
-        id: gNextId++,
-        name,
-        subject,
-        body,
-        isRead,
-        isMark,
-        sentAt
-    }
-}
+// function _createMail(name, subject, body, isRead, isMark, sentAt) {
+//     return {
+//         id: gNextId++,
+//         name,
+//         subject,
+//         body,
+//         isRead,
+//         isMark,
+//         sentAt
+//     }
+// }
 
 function getMails() {
     return Promise.resolve(gMails)

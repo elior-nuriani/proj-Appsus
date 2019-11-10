@@ -10,7 +10,7 @@ import emailSentPreview from './email-sent-preview.js';
 
 export default {
     template: `
-    <section class="mails-list-container">
+    <section class="mails-list-container flex column center wrap">
         <email-filter v-if="!isSentMail" @filterTxt="setFilter" @search="setSearch" @filterType="setFilterType"></email-filter>
         <email-status v-if="!isSentMail" :mailsInfo="mailsInfo"></email-status>
         <ul class="mail-list" v-if="!isSentMail">
@@ -18,7 +18,7 @@ export default {
             @remove="removeMail" @setProp="editProp" >
             </mail-preview>
         </ul>
-        <ul v-else>
+        <ul v-else class="mail-list">
             <email-sent-preview :mails="sentMails"></email-sent-preview>
         </ul>
     </section>

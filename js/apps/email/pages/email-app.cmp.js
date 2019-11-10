@@ -6,7 +6,7 @@ import emailNav from '../cmps/email-nav.cmp.js'
 
 
 export default {
-    template: `<section class="mail-app flex row space-between container">
+    template: `<section class="mail-main-section flex row space-between align-start base-container">
                     <email-nav></email-nav>
                     <router-view></router-view>
                </section>`,

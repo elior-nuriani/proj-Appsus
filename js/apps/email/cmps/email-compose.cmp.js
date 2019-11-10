@@ -3,8 +3,8 @@ import { mailService } from '../services/email-service.js'
 export default {
     template:
         `<section class="mail-compose-container">
-            <div class="mail-compose-header flex row center space-around">
-                <h2> New Messsage</h2>
+            <div class="mail-compose-header flex row space-between align-center">
+                <h3> New Messsage</h3>
                 <i class="fas fa-times exit" @click="exit"></i>
             </div>  
             

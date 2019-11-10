@@ -2,10 +2,8 @@
 export default {
     props:['mail'],
     template: `
-        <section class="container mail-details">
-            <h2>
+        <section class="mail-details">
                 {{mail.body}}
-            </h2>
         </section>
     `,
 }

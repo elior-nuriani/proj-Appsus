@@ -11,6 +11,9 @@
 .space-between {
     justify-content: space-between;
 }
+.align-start{
+    align-items: flex-start;
+}
 .align-end{
     align-items: flex-end;
 }
@@ -20,6 +23,12 @@
 }
 .space-around {
     justify-content: space-around;
+}
+.space-evenly{
+    justify-content: space-evenly;
+}
+.wrap{
+    flex-wrap: wrap;
 }
 
 .align-center {

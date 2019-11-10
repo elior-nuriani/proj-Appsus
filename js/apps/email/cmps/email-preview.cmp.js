@@ -2,15 +2,15 @@ import emailDetails from '../pages/email-details.cmp.js'
 export default {
     props: ['mail'],
     template: `
-        <li :class="boldText" @click="toggleShow()" class="mail-list-container clean-list">
-        <div class= "flex align-center space-around">
-            <i @click.stop="toggleStar"class="fas fa-star" :class="starDetailClass"></i>
-            <div>{{mail.name}}</div>
-            <div class="mail-main-info flex row center">
+        <li :class="boldText" @click="toggleShow()" class="mail-list-container clean-list flex column center">
+        <div class= "single-mail flex align-center space-around">
+            <i @click.stop="toggleStar"class="fas fa-star preview-star" :class="starDetailClass"></i>
+            <div class="preview-name">{{mail.name}}</div>
+            <div class="preview-subject mail-main-info flex row center">
                 <div>{{mail.subject}}</div>
             </div>
-            <div> {{time}} </div>
-            <div class="flex row space-between">
+            <div class="preview-date"> {{time}} </div>
+            <div class="preview-icon flex row space-between">
                 <div @click.stop="toggleMailRead">
                     <i v-if="isRead" class="fas fa-envelope-open-text"></i>
                     <i v-else class="fas fa-envelope"></i>
@@ -20,7 +20,7 @@ export default {
                 </div>
             </div>
         </div>
-        <email-details v-if="isShowDetails" :mail="mail" class="flex center"></email-details>
+            <email-details v-if="isShowDetails" :mail="mail" class="flex center"></email-details>
         </li>
     `,
     data() {

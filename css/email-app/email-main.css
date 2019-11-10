@@ -4,23 +4,214 @@
 .boldText{
     font-weight: bolder;
 }
-.email-filter-container{
-    width: 50vw;
+
+.email-nav{
+    padding: 20px;
+    box-shadow: 1px 1px 5px 1px #b3b3b3af;
+    flex-grow: 1;
 }
-.mails-list-container{
-    width: 100%;
-    margin-top: 50px;
+
+.email-nav i{
+    margin-right: 10px;
 }
-.mail-list-container{
-    border: 1px solid black;
-    border-bottom:none
+
+.email-nav .compose{
+   font-size: 20px;
+   border-radius: 200px;
+   background-color: rgba(96, 173, 190, 0.514);
+   padding: 10px 20px ;
+   color: rgb(0, 0, 0);
 }
-.mail-list-container:last-child{
-    border-bottom:1px solid black
+
+.mail-main-section{
+    margin-top: 15vh;
 }
+
 .mail-main-info div{
     margin: 10px;
 }
 .mail-important{
     color: gold;
+}
+.user-details{
+    padding: 10px;
+}
+
+.mail-aside-container{
+    width:150px;
+    height: 150px;
+}
+
+.mail-aside-container .mail-link:hover{
+    border-radius: 0px 50px 50px 0px;
+    background-color: rgba(96, 173, 190, 0.5);
+    transition: all 0.2s linear;
+}
+.aside-title{
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.mails-list-container{
+    flex-grow: 9;
+}
+
+.mails-filter-container,
+.mails-status-container,
+.mail-list{
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 90%;
+}
+
+.btn-filters .btn{
+    border: 1px solid rgb(36, 176, 207);
+    border-right: none;
+    color: rgb(36, 176, 207);
+    padding:  10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.btn-filters .btn:first-child,
+.btn-filters .btn:last-child
+{
+    border-right: 1px solid rgb(36, 176, 207) ;
+}
+
+.btn-filters .btn:first-child{
+    margin-right: 10px;
+}
+.btn-filters .btn::before{
+   content:'';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0%;
+   background: rgb(22, 22, 22);
+   z-index: -1;
+   border-radius:0 0 50% 50%;
+   transition: all 0.3s ease-in-out;
+}
+.btn:nth-child(1):hover::before,
+.btn:nth-child(2):hover::before,
+.btn:nth-child(3):hover::before,
+.btn:nth-child(4):hover::before{
+    height: 180%;
+    transition: all 0.3s ease-in-out;
+    background-color: #4398db;
+}
+.btn-filters .btn:hover{
+    color: #fff;
+}
+.filter-title{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.search{
+    color: rgba(96, 173, 190, 0.822);
+}
+.search input {
+    padding: 10px;
+    border:none;
+}
+
+.mails-status-container{
+    height: 100px;
+    padding: 0px 10px;
+    box-shadow: 1px 1px 5px 1px #b3b3b3af;
+    background-color: rgb(255, 255, 255);
+}
+
+.mail-status{
+    font-size: 25px;
+}
+
+.mail-status i{
+    margin-right: 20px;
+    color: #4398db;
+    background-color: rgba(211, 207, 211, 0.288);
+    padding: 10px;
+    border: 1px solid rgb(249, 248, 255);
+    border-radius: 50%;
+    margin-right: 0px;
+}
+
+.badge{
+    background-color: rgba(211, 207, 211, 0.288);
+}
+.single-mail{
+    width: 100%;
+}
+.mail-list{
+    box-shadow: 2px 2px 5px 2px #b3b3b3af;
+}
+.mail-list-container:nth-child(odd){
+    background-color: rgb(255, 255, 255);
+}
+.mail-list-container:nth-child(even){
+    background-color: rgba(211, 207, 211, 0.288);
+}
+
+
+/* ---Preview--- */
+
+.preview-icon, .preview-star{
+    width: 5%;
+}
+.preview-icon{
+    color: #3383c0;
+} 
+.preview-date, .preview-name{
+    width: 10%;
+}
+.preview-subject{
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.mail-details{
+    text-align: left;
+    max-width: 600px;
+    word-wrap: break-word;
+    margin:20px 0px
+}
+
+/* ---Compose--- */
+
+.mail-compose-container{
+    margin-left: 50px;
+    flex-grow: 2;
+    background-color: white;
+    border: 1px solid rgb(207, 200, 200);
+        box-shadow: 1px 1px 5px 5px #b3b3b3af;
+
+}
+.mail-compose-header{
+    margin: 0;
+    padding: 0 50px;
+    background-color: #4398db;
+    color: #fff;
+    text-align: center;
+    font-family: lato;
+}
+.mail-compose-container form input{
+    padding: 5px 0px;
+    border: 1px solid rgb(207, 200, 200);
+
+}
+textarea{
+    border: 1px solid rgb(207, 200, 200);
+    border-bottom: none;
+}
+
+[type="submit"]{
+    color: white;
+    background-color: #3383c0b9;
+    width: 150px;
+    height:50px ;
+    margin:10px auto;
 }
