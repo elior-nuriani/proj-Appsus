@@ -43,6 +43,7 @@ export default {
             this.$router.push('/email/list');
         },
         sentMail() {
+            // this.$emit('sent',1)
             mailService.saveSentMail(this.info);
             Swal.fire(
                 'Mail Has Been Sent Succesfuly',

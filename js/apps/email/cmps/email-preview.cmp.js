@@ -46,9 +46,7 @@ export default {
         removeMail(id){
             this.$emit('remove',id)
         },
-        setMailRead(){
-            this.$emit('mailRead',this.mail.id)
-        }
+
     },
 
     computed: {

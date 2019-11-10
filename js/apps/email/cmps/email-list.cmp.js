@@ -31,7 +31,7 @@ export default {
             filterType: 'All',
             searchBy: 'subject',
             isSentMail: false,
-            sentMails: []
+            // sentMails: []
         }
     },
     created() {
@@ -40,11 +40,9 @@ export default {
             .then(eventBus.$on('isSent', (decision) => {
                 this.isSentMail = decision;
             }))
-    },
-    mounted(){
-        mailService.getSentMails().then((res) => {
-            // console.log(res)
-        })
+        // mailService.getSentMails().then( (mails) => {
+        //     this.sentMails = mails;
+        // })
     },
 
     methods: {
@@ -65,6 +63,12 @@ export default {
         }
     },
     computed: {
+        // sentMails(){
+        //     return mailService.getSentMails().then( (mail) => {
+        //         console.log(mail)
+        //         return mail
+        //     })
+        // },
         mailsInfo() {
             let total = this.mails.length;
             let mailRead = this.mails.filter((mail) => {

@@ -3,8 +3,9 @@ import { eventBus } from '../../services/eventbus-service.js'
 
 export default {
    template: `
-            <div class="email-nav flex column center">
-               <div class="user-details flex column center">
+         <section class="aside-box">
+            <div class="email-nav flex column center" >
+               <div class="welcome flex column center">
                   <div class="aside-title"> Welcome Back </div>
                   <div> lorem ipusem uita nirra</div>
                </div>
@@ -26,11 +27,26 @@ export default {
                         <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                </div>
-            </div>`,
+            </div>
+            <div class="welcome user-details flex column center"> 
+               <div class="user-title flex row center">
+                  <img class="profile" src="/img/face.jpg">
+                  <div class="user-mail">Jojo777@gmail.com</div>
+               </div>
+               <div >John Doe<div>
+               <div >Executive Instructor<div>
+               <div >Coding Academy<div>
+            </div>
+         </section>`,
    methods: {
       filterSentMails(val) {
          eventBus.$emit('isSent', val)
+      },
+      sentMail(sent) {
+         console.log('dsad')
       }
+   },
+   computed: {
    },
    components: {
       eventBus
