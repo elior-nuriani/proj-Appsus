@@ -18,6 +18,8 @@ export default {
                 <div class="keep-btn" >
                     <button @click.stop="removeKeep(keep.id)"><i  class="fa fa-trash"></i></button>
                     <button colorbutton ><i  class="fa fa-palette"></i></button> 
+                    <button colorbutton ><i  class="fas fa-thumbtack"></i></button> 
+                    <button colorbutton ><i  class="fa fa-edit"></i></button> 
                 </div>
             </li>
         </ul>

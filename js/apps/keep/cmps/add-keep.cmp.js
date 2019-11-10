@@ -8,10 +8,10 @@ export default {
         
         <input type="text" refs="keepInput" :placeholder="inputPlaceholder" @keyup.enter="keepAdd" v-model="keep.content"/>
         <div class = "keys-input">
-        <button @click="selectKeyType('keepTxt')">TXT</button>
-        <button @click="selectKeyType('keepImg')">Img</button>
-        <button @click="selectKeyType('keepVid')">Vid</button>
-        <button @click="selectKeyType('keepTodo')">Todo</button>
+        <button @click="selectKeyType('keepTxt')"><i class="fa fa-font"></i></button>
+        <button @click="selectKeyType('keepImg')"><i class="fa fa-image"></i></button>
+        <button @click="selectKeyType('keepVid')"><i class="fab fa-youtube"></i></button>
+        <button @click="selectKeyType('keepTodo')"><i class="fa fa-list"></i></button>
         </div>
         </section>
      `,
