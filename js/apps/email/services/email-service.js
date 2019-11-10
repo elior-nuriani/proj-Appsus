@@ -8,7 +8,7 @@ export const mailService = {
     getReadMails,
     setProp,
     saveSentMail,
-    getSentMails
+    getSentMails,
 }
 // var gNextId = 100;
 var gMails = data

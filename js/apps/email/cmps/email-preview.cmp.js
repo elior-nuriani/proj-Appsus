@@ -2,7 +2,7 @@ import emailDetails from '../pages/email-details.cmp.js'
 export default {
     props: ['mail'],
     template: `
-        <li :class="boldText" @click="toggleShow()" class="mail-list-container clean-list flex column center">
+        <li :class="boldText" @click="toggleShow()"  class="mail-list-container clean-list flex column center">
         <div class= "single-mail flex align-center space-around">
             <i @click.stop="toggleStar"class="fas fa-star preview-star" :class="starDetailClass"></i>
             <div class="preview-name">{{mail.name}}</div>
@@ -33,6 +33,7 @@ export default {
     methods:{
         toggleShow(){
             this.isShowDetails = !this.isShowDetails;
+            this.isRead = true;
         },
         toggleMailRead(){
             this.isRead = !this.isRead
@@ -44,6 +45,9 @@ export default {
         },
         removeMail(id){
             this.$emit('remove',id)
+        },
+        setMailRead(){
+            this.$emit('mailRead',this.mail.id)
         }
     },
 

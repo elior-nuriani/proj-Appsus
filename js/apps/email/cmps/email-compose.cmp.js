@@ -1,18 +1,20 @@
 import { mailService } from '../services/email-service.js'
+import { eventBus } from '../../services/eventbus-service.js'
+
 
 export default {
     template:
         `<section class="mail-compose-container">
             <div class="mail-compose-header flex row space-between align-center">
-                <h3> New Messsage</h3>
+                <h5> New Messsage</h5>
                 <i class="fas fa-times exit" @click="exit"></i>
             </div>  
             
             <form @submit.prevent="sentMail" class="flex column">
-                <input type="email" placeholder="To :" v-model.trim="info.email" required />
-                <input type="text" placeholder="Subject :" v-model.trim="info.subject" required/>
-                <input type="email" placeholder="Cc :" v-model.trim="info.Cc" />
-                <input type="email" placeholder="Bcc :" v-model.trim="info.Bcc" />
+                <input type="email" placeholder=" To :" v-model.trim="info.email" required />
+                <input type="text" placeholder=" Subject :" v-model.trim="info.subject" required/>
+                <input type="email" placeholder=" Cc :" v-model.trim="info.Cc" />
+                <input type="email" placeholder=" Bcc :" v-model.trim="info.Bcc" />
                 
                 <textarea rows="10" cols="50" placeholder="Message :" v-model.trim="info.msg" required></textarea>
 
@@ -42,7 +44,6 @@ export default {
         },
         sentMail() {
             mailService.saveSentMail(this.info);
-
             Swal.fire(
                 'Mail Has Been Sent Succesfuly',
                 '',
@@ -55,6 +56,7 @@ export default {
         }
     },
     components: {
-        mailService
+        mailService,
+        eventBus
     }
 }

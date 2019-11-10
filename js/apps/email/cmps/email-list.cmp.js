@@ -15,7 +15,7 @@ export default {
         <email-status v-if="!isSentMail" :mailsInfo="mailsInfo"></email-status>
         <ul class="mail-list" v-if="!isSentMail">
             <mail-preview v-for="(currMail, idx) in mailsToShow" :key="currMail.id" :mail="currMail" 
-            @remove="removeMail" @setProp="editProp" >
+            @remove="removeMail" @setProp="editProp">
             </mail-preview>
         </ul>
         <ul v-else class="mail-list">
@@ -62,7 +62,7 @@ export default {
         },
         editProp(mailId, key) {
             mailService.setProp(mailId, key)
-        },
+        }
     },
     computed: {
         mailsInfo() {
