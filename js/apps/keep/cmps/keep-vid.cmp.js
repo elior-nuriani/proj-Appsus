@@ -3,8 +3,8 @@ export default {
     name: 'keep-vid',
     props: ['content'],
     template: `
-        <section class="keep-preview-container flex">
-        <iframe  :src="vidUrl" alt=""></iframe>
+        <section class="vid-card">
+            <iframe  :src="vidUrl" alt=""></iframe>
         </section>
     `,
     created() {

@@ -8,9 +8,11 @@ export default {
 
     name: 'keep-app',
     template: `
-    <section class="keep-app-container">
+    <section class="keep-app-container flex column center wrap">
+    <div class="flex column center">
         <keep-header @search="filteredKeeps"></keep-header>
         <add-keep></add-keep>
+    </div>
         
         <keep-list :keeps="keepsToShow" v-if></keep-list>
     </section>

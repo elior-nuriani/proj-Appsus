@@ -1,7 +1,6 @@
 export default {
     template: `
-        <header class="keep-header-container">
-            <h1>Search area</h1>
+        <header class="keep-header-container flex row">
             <input type="text" placeholder="Search In your keep" @click="onSearch" />
             <select>
                 <option>All</option>
