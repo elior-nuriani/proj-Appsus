@@ -1,40 +1,57 @@
 'use strict'
 
 
-import {storageService} from '../../services/utils-service.js'
+import utilService from '../../services/utils-service.js'
 
 
 export const keepService = {
     keepQuery,
     getKeeps,
     createKeep,
+    removeKeep,
     
 }
 const KEEPS_KEY = 'keepsKey'
 
 function createKeep(type, content) {
-    // gKeeps = storageService.load(KEEPS_KEY)
+    // gKeeps = utilService.load(KEEPS_KEY)
     console.log('content', content);
     let newKeep = {
         id: makeId(),
         isPinned: false,
         type,
         content,
-        color: 'white'
+        color: utilService.getRandomColor(true)
     };
     console.log('newKeep', newKeep);
     gKeeps.unshift(newKeep);
     console.log('gkeeps', gKeeps);
-    storageService.store(KEEPS_KEY, gKeeps)
+    utilService.store(KEEPS_KEY, gKeeps)
+}
+
+function getKeeps() {
+    console.log('gkkeps get keeps',gKeeps);
+    
+    return Promise.resolve(gKeeps);
 }
 
 function keepQuery() {
-    let keeps = storageService.load(KEEPS_KEY)
+    let keeps = utilService.load(KEEPS_KEY)
     if (!keeps) {
         keeps = gKeeps
-        storageService.store(KEEPS_KEY, keeps)
+        utilService.store(KEEPS_KEY, keeps)
     }
     gKeeps = keeps
+    return Promise.resolve(gKeeps)
+}
+
+function removeKeep(id){
+    // gKeeps = utilService.load(KEEPS_KEY)
+    // console.log('gkeeps ufter removal', gKeeps);
+    let keepIdx = gKeeps.findIndex(keep => keep.id === id)
+    gKeeps.splice(keepIdx, 1)
+    utilService.store(KEEPS_KEY , gKeeps)
+    
     return Promise.resolve(gKeeps)
 }
 
@@ -46,7 +63,7 @@ let gKeeps = [
         type: 'keepTxt',
         content: 'note 1',
         isPinned: false,
-        color: 'black',
+        color: utilService.getRandomColor(true)
 
     },
     {
@@ -54,14 +71,14 @@ let gKeeps = [
         type: 'keepTxt',
         content: 'note 2',
         isPinned: false,
-        color: 'red',
+        color: utilService.getRandomColor(true)
     },
     {
         id: 103,
         type: 'keepTxt',
         content: 'note 3',
         isPinned: false,
-        color: 'blue',
+        color: utilService.getRandomColor(true)
     },
     {
         id: 104,
@@ -80,7 +97,7 @@ let gKeeps = [
             }
         ],
         isPinned: false,
-        color: 'white',
+        color: utilService.getRandomColor(true)
 
     },
     {
@@ -88,14 +105,14 @@ let gKeeps = [
         type: 'keepImg',
         content: 'https://i0.wp.com/psychedelic.support/wp-content/uploads/2019/03/CarlJung.jpg?fit=681%2C714&ssl=1',
         isPinned: false,
-        color: 'pink',
+        color: utilService.getRandomColor(true)
     },
     {
         id: 106,
         type: 'keepVid',
         content: 'https://www.youtube.com/watch?v=EuPSibuIKIg',
         isPinned: false,
-        color: 'yellow',
+        color: utilService.getRandomColor(true)
     },
 ]
 
@@ -104,9 +121,6 @@ let gKeeps = [
 
 // window.keeps = gKeeps;
 
-function getKeeps() {
-    return Promise.resolve(gKeeps);
-}
 
 function makeId(length = 4) {
     var text = '';

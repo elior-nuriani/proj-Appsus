@@ -9,10 +9,10 @@ export default {
     name: 'keep-app',
     template: `
     <section class="keep-app-container">
-    <keep-header></keep-header>
+    <keep-header @search="filteredKeeps"></keep-header>
     <add-keep></add-keep>
     
-    <keep-list :keeps="keepsToShow" ></keep-list>
+    <keep-list :keeps="keepsToShow" v-if></keep-list>
     </section>
     
     `,
@@ -27,12 +27,13 @@ export default {
                 }
 
             )
-        }
+        },
+        filteredKeeps(e) {
+            console.log(e);
+        },
     },
     methods: {
-        setFilter(filterBy) {
-            this.filterBy = filterBy
-        }
+        
     },
     components: {
         keepList,
