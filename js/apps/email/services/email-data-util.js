@@ -21,7 +21,7 @@ function _createMails() {
             false,
             99992032093),
         _createMail(
-            'Lucky',
+            '@Lucky',
             'Job application',
             'amet quis sunt esse dolore incididunt sunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
             false,
@@ -54,7 +54,51 @@ function _createMails() {
             'nulla aliqua et officia elit aliqua ad cillum reprehenderit occaecat reprehenderit cupidatat nisi quis dolor aliquip nostrud elit mollit nisi non qui ex incididunt nulla nulla ad voluptate ullamco duis laboris consectetur culpa mollit voluptate nostrud aute id voluptate @........consectetur fugiat qui aliquip ea amet excepteur tempor deserunt pariatur proident esse laborum et commodo dolor nostrud consectetur consectetur sunt aute minim sunt occaecat duis eiusmod dolore labore eiusmod adipisicing elit do esse elit incididunt consectetur aute commodo commodo exercitation in ad aliquip in eu anim pariatur est anim',
             true,
             true,
-            19000929)
+            459000929),
+        _createMail(
+            '@Lucky',
+            'ooppee Vueds e!',
+            'amet quis sunt esse dolore incididunt sunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
+            false,
+            true,
+            32831232323),
+        _createMail(
+            '@j2doky',
+            'Vdsauee V dsads uee',
+            'amet quis sunt esse dolore inciddunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
+            false,
+            false,
+            32832323),
+        _createMail(
+            '@shoko',
+            'sdpp 123',
+            'amet quis sunt esse dolore incididunt sunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
+            true,
+            true,
+            773200023),
+        _createMail(
+            '@lormem',
+            'dede dede',
+            'amet quis sunt esse dolore incididunt sunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
+            false,
+            true,
+            3200023),
+        _createMail(
+            '@odd',
+            'sdpp 123',
+            'amet quis sunt esse dolore incididunt sunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
+            true,
+            false,
+            933200023),
+        _createMail(
+            '@shoko',
+            'sdpp 123',
+            'amet quis sunt esse dolore incididunt sunt est sint velit non duis cupidatat laboris officia quis non sit consectetur irure officia quis minim fugiat ullamco tempor enim est fugiat aliqua irure quis ex amet labore esse id et ullamco ullamco exercitation elit ad in aliquip ut commodo in reprehenderit id elit fugiat ex aliquip quis ad Lorem enim sit in magna aute consequat exercitation anim sit magna eiusmod et cupidatat nulla adipisicing minim nostrud cupidatat Lorem laboris incididunt ea aliqua dolor voluptate excepteur anim minim aliquip cillum esse labore Lorem in velit voluptate amet laborum irure exercitation voluptate duis veniam',
+            true,
+            false,
+            3203230023),
+
+
     ]
     return mails;
 }

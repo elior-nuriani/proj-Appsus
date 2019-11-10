@@ -19,7 +19,7 @@
    font-size: 20px;
    border-radius: 200px;
    background-color: rgba(96, 173, 190, 0.514);
-   padding: 10px 20px ;
+   padding: 5px 5px ;
    color: rgb(0, 0, 0);
 }
 
@@ -124,6 +124,10 @@
     padding: 0px 10px;
     box-shadow: 1px 1px 5px 1px #b3b3b3af;
     background-color: rgb(255, 255, 255);
+
+}
+.mails-status-container span{
+    color: rgb(53, 136, 128);
 }
 
 .mail-status{
@@ -184,7 +188,7 @@
 
 .mail-compose-container{
     margin-left: 50px;
-    flex-grow: 2;
+    flex-grow: 10;
     background-color: white;
     border: 1px solid rgb(207, 200, 200);
     box-shadow: 1px 1px 5px 5px #b3b3b3af;
@@ -192,20 +196,18 @@
 }
 .mail-compose-header{
     margin: 0;
-    padding: 0 50px;
+    padding: 5px 10px;
     background-color: #3383c0;
     color: #fff;
     text-align: center;
     font-family: lato;
 }
-.mail-compose-container form input{
-    
-    padding: 5px 0px;
+.mail-compose-container form input, textarea{
+    padding: 5px 10px;
     border: 1px solid rgb(207, 200, 200);
 
 }
 textarea{
-    border: 1px solid rgb(207, 200, 200);
     border-bottom: none;
 }
 
