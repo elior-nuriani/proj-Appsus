@@ -86,7 +86,7 @@ let gKeeps = [
     {
         id: utilService.makeId(),
         type: 'keepTxt',
-        content: 'note 1',
+        content: 'Paul Van Haver (Dutch pronunciation: [ˈpɔːl vɑn ˈɦɑvər]; born 12 March 1985), better known by his stage name Stromae',
         isPinned: false,
         color: utilService.getRandomColor(true)
 
@@ -101,7 +101,21 @@ let gKeeps = [
     {
         id: utilService.makeId(),
         type: 'keepTxt',
-        content: 'When first learning to code, it’s easy to feel like a deer in the headlights; everything is unfamiliar and new. Its like learning to play a new instrument or a foreign language—what is this and what the heck am I doing?',
+        content: 'This post covers some basic concepts in.....',
+        isPinned: false,
+        color: utilService.getRandomColor(true)
+    },
+    {
+        id: utilService.makeId(),
+        type: 'keepImg',
+        content: 'https://i0.wp.com/psychedelic.support/wp-content/uploads/2019/03/CarlJung.jpg?fit=681%2C714&ssl=1',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+    {
+        id: utilService.makeId(),
+        type: 'keepTxt',
+        content: 'UX Designers consider the Why, What and How of Product Use',
         isPinned: false,
         color: utilService.getRandomColor(true)
     },
@@ -111,37 +125,77 @@ let gKeeps = [
         content: [
             {
                 id: utilService.makeId(),
-                txt: 'keepTxt',
+                txt: 'Perform car service',
                 isActive: 'false'
             },
             {
                 id: utilService.makeId(),
-                txt: 'note 5',
+                txt: 'Check library open hours',
                 isActive: true,
-
-            }
+                
+            },
+            {
+                id: utilService.makeId(),
+                txt: 'Pay the rent',
+                isActive: true,
+                
+            },
+            {
+                id: utilService.makeId(),
+                txt: 'Order tickets to show',
+                isActive: true,
+                
+            },
         ],
         isPinned: false,
         color: utilService.getRandomColor(true)
-
+        
     },
-    {
-        id: utilService.makeId(),
-        type: 'keepImg',
-        content: 'https://i0.wp.com/psychedelic.support/wp-content/uploads/2019/03/CarlJung.jpg?fit=681%2C714&ssl=1',
-        isPinned: false,
-        color: utilService.getRandomColor(true)
-    },
-    {
-        id: utilService.makeId(),
-        type: 'keepVid',
-        content: 'https://www.youtube.com/watch?v=EuPSibuIKIg',
-        isPinned: false,
-        color: utilService.getRandomColor(true)
-    },
-]
-
-
+            {
+                id: utilService.makeId(),
+                type: 'keepVid',
+                content: 'https://www.youtube.com/watch?v=EuPSibuIKIg',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+            {
+                id: utilService.makeId(),
+                type: 'keepVid',
+                content: 'https://www.youtube.com/watch?v=dTL8HZmEadk',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+            {
+                id: utilService.makeId(),
+                type: 'keepImg',
+                content: 'https://pocket-image-cache.com//filters:no_upscale()/https%3A%2F%2Fmiro.medium.com%2Fmax%2F3200%2F1*i8-u-V8LTTbQwTeUwLI_BQ.gif',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+            {
+                id: utilService.makeId(),
+                type: 'keepImg',
+                content: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTVM3DTwmO6ucCXUvg-ChPJRXM52LCqnNZ7_C6jzlOJ0mqkQ8pTw&s',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+            {
+                id: utilService.makeId(),
+                type: 'keepVid',
+                content: 'https://www.youtube.com/watch?v=EuPSibuIKIg',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+            {
+                id: utilService.makeId(),
+                type: 'keepTxt',
+                content: 'When first learning to code, it’s easy to feel like a deer in the headlights; everything is unfamiliar and new. Its like learning to play a new instrument or a foreign language—what is this and what the heck am I doing?',
+                isPinned: false,
+                color: utilService.getRandomColor(true)
+            },
+        ]
+        
+        
 function makeId(length = 4) {
     var text = '';
     var possible =
