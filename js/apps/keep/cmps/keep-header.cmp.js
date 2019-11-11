@@ -1,13 +1,13 @@
 export default {
     template: `
-        <header class="keep-header-container flex row">
+        <header class="keep-header-container flex row ">
             <input type="text" placeholder="Search In your keep" @input="onSearch" />
             <select>
                 <option>All</option>
                 <option>Text</option>
                 <option>Images</option>
                 <option>Videos</option>
-                <option>Todo Items</option>
+                <option>Todo</option>
             </select>
            
         </header>

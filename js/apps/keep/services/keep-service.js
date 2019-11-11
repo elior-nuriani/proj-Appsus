@@ -74,8 +74,9 @@ function removeKeep(id) {
 }
 
 function updateKeep(keepId, key, value) {
+   
     let keep = gKeeps.find(keep => keep.id === keepId);
-    keep[key] =  value;
+    keep.color =  key;
     utilService.store(KEEPS_KEY, gKeeps)
     return Promise.resolve(gKeeps)
 }
@@ -93,14 +94,14 @@ let gKeeps = [
     {
         id: utilService.makeId(),
         type: 'keepTxt',
-        content: 'note 2',
+        content: 'Life is a tough period',
         isPinned: false,
         color: utilService.getRandomColor(true)
     },
     {
         id: utilService.makeId(),
         type: 'keepTxt',
-        content: 'note 3',
+        content: 'When first learning to code, it’s easy to feel like a deer in the headlights; everything is unfamiliar and new. Its like learning to play a new instrument or a foreign language—what is this and what the heck am I doing?',
         isPinned: false,
         color: utilService.getRandomColor(true)
     },
