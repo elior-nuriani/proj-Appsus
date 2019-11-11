@@ -93,14 +93,14 @@ let gKeeps = [
     {
         id: utilService.makeId(),
         type: 'keepTxt',
-        content: 'Life is a tough period',
+        content: 'note 2',
         isPinned: false,
         color: utilService.getRandomColor(true)
     },
     {
         id: utilService.makeId(),
         type: 'keepTxt',
-        content: 'When first learning to code, it’s easy to feel like a deer in the headlights; everything is unfamiliar and new. Its like learning to play a new instrument or a foreign language—what is this and what the heck am I doing?',
+        content: 'note 3',
         isPinned: false,
         color: utilService.getRandomColor(true)
     },
@@ -117,6 +117,7 @@ let gKeeps = [
                 id: utilService.makeId(),
                 txt: 'note 5',
                 isActive: true,
+
             }
         ],
         isPinned: false,
@@ -154,3 +155,4 @@ function makeId(length = 4) {
 
 
 
+console.log(gKeeps)

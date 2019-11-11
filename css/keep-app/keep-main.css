@@ -33,8 +33,8 @@
     list-style: none;
     border: 4px solid black;
     max-width: 400px;
-    /* flex-direction: column; */
-    /* display: flex; */
+    flex-direction: column;
+    display: flex;
     padding: 10px;
     margin: 5px;
     /* flex: 0 0 30%; */
