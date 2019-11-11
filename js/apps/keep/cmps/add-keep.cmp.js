@@ -6,7 +6,7 @@ export default {
     template: `
         <section class="keep-add flex align-center ">
         
-        <input type="text" refs="keepInput" :placeholder="inputPlaceholder" @keyup.enter="keepAdd" v-model="keep.content"/>
+        <input type="text" class="keepsInput" refs="keepInput" :placeholder="inputPlaceholder" @keyup.enter="keepAdd" v-model="keep.content"/>
         <div class = "keys-input">
         <button @click="selectKeyType('keepTxt')"><i class="fa fa-font"></i></button>
         <button @click="selectKeyType('keepImg')"><i class="fa fa-image"></i></button>
@@ -51,6 +51,8 @@ export default {
             keepService.createKeep(type, content)
             // console.log('add-keep type', type);
             this.$refs['keepInput'] = '';
+            document.querySelector('.keepsInput').value = '';
+
             
 
         }
