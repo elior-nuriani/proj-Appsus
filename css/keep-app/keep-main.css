@@ -47,7 +47,16 @@
 
 .keep-header-container, .keep-add{
    margin-bottom: 30px;
+   
+   
 }
+
+.keep-header-container :first-child{
+    margin-right: 50px;
+
+}
+
+
 .keep-list-container{
     max-width: 90%;
     column-count: 4;
@@ -97,13 +106,41 @@ iframe{
 
     font-size: 18px;
     text-align: left;
-
+        
 }
 
 .keep-todo > input {
     float: left;
+    text-decoration: underline;
 }
 .keep-preview{
     text-overflow: hidden;
     word-break: break-all;
+}
+
+.marked{
+    text-decoration: line-through;
+}
+#JIsA{
+    display: none;
+}
+
+input[type=checkbox]{
+    display: none;
+    
+}
+
+.btn-color {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+.pinned {
+    /* position: absolute; */
+    color: brown;
+    /* top: 500px;
+    left: 600px; */
+    transform: rotate(-25deg);
 }
