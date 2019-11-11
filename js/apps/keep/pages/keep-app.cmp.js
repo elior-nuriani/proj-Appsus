@@ -52,7 +52,7 @@ export default {
         keepService,
     },   
     created() {
-        this.keeps = this.keepsToShow();
+        this.keeps = this.keepsToShow;
     },
     //     computed:{
         //             keepToShow(){

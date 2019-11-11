@@ -5,9 +5,9 @@ export default {
    template: `
          <section class="aside-box">
             <div class="email-nav flex column center" >
-               <div class="welcome flex column center">
+               <div class="aside-head welcome flex column center">
                   <div class="aside-title"> Welcome Back </div>
-                  <div> lorem ipusem uita nirra</div>
+                  <div class="aside-second"> lorem ipusem uita nirra</div>
                </div>
                <div class="mail-aside-container flex column space-around">
                   <div class="flex row align-center mail-link">
@@ -23,9 +23,6 @@ export default {
                     <i class="fas fa-plus"></i>
                     <router-link to="/email/compose">Compose</router-link>
                   </div>
-                  <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
                </div>
             </div>
             <div class="welcome user-details flex column center"> 
@@ -33,9 +30,9 @@ export default {
                   <img class="profile" src="/img/face.jpg">
                   <div class="user-mail">Jojo777@gmail.com</div>
                </div>
-               <div >John Doe<div>
-               <div >Executive Instructor<div>
-               <div >Coding Academy<div>
+               <div >John Doe</div>
+               <div >Executive Instructor</div>
+               <div >Coding Academy</div>
             </div>
          </section>`,
    methods: {
